@@ -10,6 +10,7 @@ import Timeline from './pages/Timeline'
 import EditProfile from './pages/EditProfile'
 import Notifications from './pages/Notifications'
 import Search from './pages/Search'
+import PostDetails from './pages/PostDetails';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/feeds" component={ Timeline } />
               <Route path="/notifications" component={ Notifications } />
               <Route path="/search" component={ Search } />
+              <Route path="/feed-details" component={ PostDetails } />
             </Switch>
             <RightPane />
           </div>

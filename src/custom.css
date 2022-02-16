@@ -34,3 +34,11 @@
 .push-search {
     padding-right: 10px;
 }
+
+.jumbotron {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}

@@ -3,10 +3,18 @@ import React from 'react'
 
 import { AiFillHeart } from 'react-icons/ai'
 import { MdInsertComment } from 'react-icons/md'
+import { useHistory } from 'react-router-dom'
 
 const SinglePost = () => {
+
+    const myHistory = useHistory();
+
+    const handlePostNavigation = () => {
+        myHistory.push('/feed-details');
+    }
+
     return (
-        <div className="card p-3 base-card curve-card">
+        <div className="card p-3 base-card curve-card" onClick={handlePostNavigation}>
             <div className="d-flex align-items-center">
                 <div className="avater-1 avater-2 mt-2">
                     <img src="assets/images/hex.png" className='hex' alt="" />

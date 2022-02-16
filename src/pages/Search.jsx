@@ -43,10 +43,18 @@ const Search = props => {
                                     value={search} />
                             </form>
                         </div>
-
-                        <SinglePost />
-                        <SinglePost />
-                        <SinglePost />
+                        {
+                            search !== '' ?
+                                <div>
+                                    <SinglePost />
+                                    <SinglePost />
+                                </div>
+                                : <div className='jumbotron'>
+                                    <p>
+                                        Please type to make search
+                                    </p>
+                                </div>
+                        }
                     </div>
                 </div>
             </div>
