@@ -1,44 +1,94 @@
 .ws-search {
-    border: 1px solid #eee;
-    border-radius: 4px;
+  border: 1px solid #eee;
+  border-radius: 4px;
 }
 
-.ws-search, input {
-    background: none;
+.ws-search,
+input {
+  background: none;
 }
 
 .linknav {
-    color: #985629;
+  color: #985629;
 }
 
 .linknav:hover {
-    color: #985629;
+  color: #985629;
 }
 
 .base-card {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .curve-card {
-    border-radius: 12px;
+  border-radius: 12px;
 }
 
 .custom-container {
-    padding: 15px;
+  padding: 15px;
 }
 
 .border-end-attached {
-    border-right: none !important;
+  border-right: none !important;
 }
 
 .push-search {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .jumbotron {
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    text-align: center;
-    align-items: center;
-    padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.adjust-form {
+  margin-top: 30px;
+}
+
+.border-area {
+  border: 1px #ccc !important;
+  padding: 12px;
+}
+
+.float-right {
+  float: right;
+}
+
+.setSelectedActive {
+    background-color: #985629;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  transition: 0.3s ease;
+  background-color: red;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.avater-1:hover .overlay {
+  opacity: 0.7;
+}
+
+.icon {
+  position: absolute;
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+  left: 50%;
+  bottom: 50%;
+  background-color: red;
+}
+
+/* When you move the mouse over the icon, change color */
+.cool-btn:hover {
+  color: green;
 }
