@@ -43,8 +43,8 @@ const TopPane = () => {
                                 }
 
                                 <div className="ws-search">
-                                    <AiOutlineSearch className='fs-4 text-faded' />
                                     <form onSubmit={handleSubmit}>
+                                        <AiOutlineSearch className='fs-4 text-faded' />
                                         <input
                                             type="text"
                                             placeholder='Search'
