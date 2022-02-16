@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { NavLink } from 'react-router-dom';
 import Navigation from '../Navigation'
 
 const LeftPane = () => {
@@ -19,7 +20,9 @@ const LeftPane = () => {
                             <img src="assets/images/ape.png" className='profile' alt="" />
                         </div>
                         <span className='fs-4 fw-600  mt-2'>Dannyboy</span>
-                        <span className='fs-6 fw-600 text-faded '>@daniel01</span>
+                        <NavLink to="/@daniel01" activeClassName="selected" className="linknav push-search">
+                            <span className='fs-6 fw-600 text-faded '>@daniel01</span>
+                        </NavLink>
                         <span className=' fw-600 fs-7 mt-2 text-faded-2'>Product and 3D Game Designer</span>
                         <div className="row mt-3 px-4 mx-0">
                             <div className="col-6 px-0 pe-1">

@@ -10,7 +10,8 @@ import Timeline from './pages/Timeline'
 import EditProfile from './pages/EditProfile'
 import Notifications from './pages/Notifications'
 import Search from './pages/Search'
-import PostDetails from './pages/PostDetails';
+import PostDetails from './pages/PostDetails'
+import UserProfile from './pages/UserProfile';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
               <Route path="/notifications" component={ Notifications } />
               <Route path="/search" component={ Search } />
               <Route path="/feed-details" component={ PostDetails } />
-              <Route path="/:username" component={ PostDetails } />
+              <Route path="/:username" component={ UserProfile } />
             </Switch>
             <RightPane />
           </div>
