@@ -1,8 +1,6 @@
 .ws-search {
-    margin-left: 25px;
     border: 1px solid #eee;
     border-radius: 4px;
-    width: 100%;
 }
 
 .ws-search, input {
@@ -23,4 +21,16 @@
 
 .curve-card {
     border-radius: 12px;
+}
+
+.custom-container {
+    padding: 15px;
+}
+
+.border-end-attached {
+    border-right: none !important;
+}
+
+.push-search {
+    padding-right: 10px;
 }

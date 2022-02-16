@@ -15,15 +15,15 @@ const Navigation = () => {
                 </NavLink>
             </div>
             <div className="d-flex ws-tabs mt-3 ps-4">
-                <NavLink to="/profile" activeClassName="selected" className="linknav">
-                    <HiUserCircle />
-                    <span className='fs-5 fw-600 ms-3 pt-1 text-faded-2'>Edit Profile</span>
-                </NavLink>
-            </div>
-            <div className="d-flex ws-tabs mt-3 ps-4">
                 <NavLink to="/feeds" activeClassName="selected" className="linknav">
                     <MdOutlineCollections />
                     <span className='fs-5 fw-600 ms-3 pt-1 text-faded-2'>Feeds</span>
+                </NavLink>
+            </div>
+            <div className="d-flex ws-tabs mt-3 ps-4">
+                <NavLink to="/profile" activeClassName="selected" className="linknav">
+                    <HiUserCircle />
+                    <span className='fs-5 fw-600 ms-3 pt-1 text-faded-2'>Edit Profile</span>
                 </NavLink>
             </div>
             <div className="d-flex ws-tabs mt-3 ps-4">

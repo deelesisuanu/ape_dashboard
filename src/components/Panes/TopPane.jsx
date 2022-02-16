@@ -2,38 +2,17 @@ import React, { useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineBell } from 'react-icons/ai'
 import { Dropdown, DropdownButton } from 'react-bootstrap'
 import { AiOutlineSearch } from 'react-icons/ai'
-import { NavLink, useHistory } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const TopPane = () => {
 
     const [state, setState] = useState(1);
-    const [search, setSearch] = useState('');
-
-    const userHistory = useHistory();
-
-    const handleUserSearchChange = event => {
-        setSearch(event.target.value)
-    };
-
-    const handleSubmit = event => {
-        event.preventDefault();
-
-        console.log("Fuming ", search)
-
-        userHistory.push({
-            pathname: '/search',
-            state: { search: search }
-        });
-        
-        // userHistory.pushState('/search', { search: search })
-
-    };
 
     return (
         <div className="top">
             <div className="container">
                 <div className="row mx-0">
-                    <div className="col-lg-3 d-lg-block d-none border-end">
+                    <div className="col-lg-3 d-lg-block d-none border-end border-end-attached">
                         <div className="top p-3 d-flex align-items-center ">
                             <img src="assets/images/logo.png" className='logo' alt="" />
                         </div>
@@ -50,21 +29,15 @@ const TopPane = () => {
                                     </>
                                 }
 
-                                <div className="ws-search">
-                                    <form onSubmit={handleSubmit}>
-                                        <AiOutlineSearch className='fs-4 text-faded' />
-                                        <input
-                                            type="text"
-                                            placeholder='Search'
-                                            name='searchValue'
-                                            onChange={handleUserSearchChange}
-                                            value={search} />
-                                    </form>
-                                </div>
+                                <span className='fs-6 text-faded fw-600 ps-3'>2355 Posts </span>
 
-                                {/* <span className='fs-6 text-faded fw-600 ps-3'>2355 Posts </span> */}
                             </div>
                             <div className="d-flex col justify-content-end align-items-center ">
+
+                                <NavLink to="/search" activeClassName="selected" className="linknav push-search">
+                                    <AiOutlineSearch className='fs-4 text-faded' />
+                                </NavLink>
+
                                 <span className='bell me-lg-3'>
                                     <NavLink to="/notifications" activeClassName="selected" className="linknav">
                                         <span></span>
@@ -78,9 +51,7 @@ const TopPane = () => {
                                     </div>
                                     <span className='fw-500 text-faded-2 '>Stix.near</span>
                                 </>}>
-                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-1">Disconnect</Dropdown.Item>
                                 </DropdownButton>
                             </div>
                         </div>
