@@ -1,0 +1,26 @@
+.ws-search {
+    margin-left: 25px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.ws-search, input {
+    background: none;
+}
+
+.linknav {
+    color: #985629;
+}
+
+.linknav:hover {
+    color: #985629;
+}
+
+.base-card {
+    margin-bottom: 10px;
+}
+
+.curve-card {
+    border-radius: 12px;
+}
