@@ -17,8 +17,16 @@ const TopPane = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        userHistory.push('/search', { search })
-        console.log(search)
+
+        console.log("Fuming ", search)
+
+        userHistory.push({
+            pathname: '/search',
+            state: { search: search }
+        });
+        
+        // userHistory.pushState('/search', { search: search })
+
     };
 
     return (
