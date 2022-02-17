@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
-import ProfileHeader from '../components/ProfileHeader'
 import { ProfileCorner } from '../components/styles/common'
 import Icon from '../components/styles/icon'
 import { Cover, ImgFlex, Avatar, Info, Dates, Button } from '../components/styles/profile'
-import { AiOutlineEllipsis } from 'react-icons/ai'
-import { FaEnvelope } from 'react-icons/fa'
+import { AiTwotoneNotification, AiFillNotification } from 'react-icons/ai'
+import { IoMdNotifications } from 'react-icons/io'
 import SinglePost from '../components/SinglePost'
 import Tabs from '../components/styles/tab'
 import { ToggleContext } from '../contexts/ToggleContext'
@@ -63,10 +62,6 @@ const UserProfile = () => {
         <>
             <div className={state === 1 ? "col-lg-6 col-12 px-0" : "col-12 px-0"} onClick={handleNavToggle}>
                 <ProfileCorner border="white" className='main-profile'>
-                    {/* <ProfileHeader
-                        heading={`John Smith`}
-                        text={'you are welcome'}
-                    /> */}
                     <div>
                         <Cover
                             style={{
@@ -76,15 +71,18 @@ const UserProfile = () => {
                         ></Cover>
                         <ImgFlex>
                             <Avatar backgroundImage="assets/images/ape.png" bg="white" />
-                            <Button bg="#985629" className='pads extra-button extra-button2'>
-                                <AiOutlineEllipsis color='white' />
-                            </Button>
-                            <Button bg="#985629" className='pads extra-button'>
-                                <FaEnvelope color='white' />
-                            </Button>
-                            <Button bg="#985629" className='pads'>
-                                <span className='color-white'>Follow</span>
-                            </Button>
+                            <div className='add-pad-10'>
+                                <div className="leftbox">
+                                    <Button bg="#985629" className='pads ext-pad'>
+                                        <IoMdNotifications color='white' />
+                                    </Button>
+                                </div>
+                                <div className="rightbox">
+                                    <Button bg="#985629" className='pads'>
+                                        <span className='color-white'>Follow</span>
+                                    </Button>
+                                </div>
+                            </div>
                         </ImgFlex>
                     </div>
                     <Info color="black">
@@ -101,20 +99,22 @@ const UserProfile = () => {
                             <div>
                                 <Icon
                                     d={locationPath}
-                                    width="18.75px"
-                                    height="18.75px"
+                                    width="15.75px"
+                                    height="15.75px"
                                     fill="rgb(101,119,134)"
+                                    className="adjust-top"
                                 />
-                                <span>Amsterdam</span>
+                                <span className='adjust-top2'>Amsterdam</span>
                             </div>
                             <div>
                                 <Icon
                                     d={dobPath}
-                                    width="18.75"
-                                    height="18.75"
+                                    width="15.75"
+                                    height="15.75"
                                     fill="rgb(101, 119, 134)"
+                                    className="adjust-top"
                                 />
-                                <span>
+                                <span className='smll-font adjust-top2'>
                                     Born {dob.toLocaleString("default", { month: "long" })}{" "}
                                     {dob.getDate()}, {dob.getFullYear()}
                                 </span>
@@ -122,11 +122,12 @@ const UserProfile = () => {
                             <div>
                                 <Icon
                                     d={joinPath}
-                                    width="18.75"
-                                    height="18.75"
+                                    width="15.75"
+                                    height="15.75"
                                     fill="rgb(101, 119, 134)"
+                                    className="adjust-top"
                                 />
-                                <span>
+                                <span className='adjust-top2'>
                                     {" "}
                                     Joined{" "}
                                     {joinedAt.toLocaleString("default", {
@@ -137,14 +138,21 @@ const UserProfile = () => {
                             </div>
                         </Dates>
 
-                        <div className='row add-pad-10'>
-                            <div className="leftbox">
-                                <span className='bolden'>100</span> Following
-                            </div>
-                            <div className="rightbox">
-                                <span className='bolden'>200</span> Followers
+                        <div className='row'>
+                            <div className='add-pad-10'>
+                                <div className="leftbox1">
+                                    <span>
+                                        <span className='bolden'>100</span> Following
+                                    </span>
+                                </div>
+                                <div className="rightbox2">
+                                    <span className='pull-close-left'>
+                                        <span className='bolden'>200</span> Followers
+                                    </span>
+                                </div>
                             </div>
                         </div>
+
                     </Info>
 
                     <Tabs tabList={tabList} />

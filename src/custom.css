@@ -66,29 +66,124 @@ input {
   display: inline-block;
 }
 
-.over-avatar:hover .edit {
+/* .over-avatar:hover .edit {
   display: block;
-}
+} */
 
 .edit {
-  padding-top: 7px;
-  padding-right: 7px;
   position: absolute;
-  left: 90px !important;
-  right: 5;
-  top: 0;
+  right: 220px;
+  top: 70px;
+  z-index: 500;
+  display: block;
+  visibility: hidden;
+}
 
-  /* border: 1px solid #fff;
-  border-radius: 50%;
-  padding: 8px !important; */
+.prof-cus:hover {
+  opacity: 0.4;
+  border: 1px solid black;
+}
 
-  /* bottom: 45px !important; */
-  /* display: none; */
+.prof-cus {
+  -webkit-clip-path: polygon(
+    92.32051% 40%,
+    93.79385% 43.1596%,
+    94.69616% 46.52704%,
+    95% 50%,
+    94.69616% 53.47296%,
+    93.79385% 56.8404%,
+    92.32051% 60%,
+    79.82051% 81.65064%,
+    77.82089% 84.50639%,
+    75.35575% 86.97152%,
+    72.5% 88.97114%,
+    69.3404% 90.44449%,
+    65.97296% 91.34679%,
+    62.5% 91.65064%,
+    37.5% 91.65064%,
+    34.02704% 91.34679%,
+    30.6596% 90.44449%,
+    27.5% 88.97114%,
+    24.64425% 86.97152%,
+    22.17911% 84.50639%,
+    20.17949% 81.65064%,
+    7.67949% 60%,
+    6.20615% 56.8404%,
+    5.30384% 53.47296%,
+    5% 50%,
+    5.30384% 46.52704%,
+    6.20615% 43.1596%,
+    7.67949% 40%,
+    20.17949% 18.34936%,
+    22.17911% 15.49361%,
+    24.64425% 13.02848%,
+    27.5% 11.02886%,
+    30.6596% 9.55551%,
+    34.02704% 8.65321%,
+    37.5% 8.34936%,
+    62.5% 8.34936%,
+    65.97296% 8.65321%,
+    69.3404% 9.55551%,
+    72.5% 11.02886%,
+    75.35575% 13.02848%,
+    77.82089% 15.49361%,
+    79.82051% 18.34936%
+  );
+  clip-path: polygon(
+    92.32051% 40%,
+    93.79385% 43.1596%,
+    94.69616% 46.52704%,
+    95% 50%,
+    94.69616% 53.47296%,
+    93.79385% 56.8404%,
+    92.32051% 60%,
+    79.82051% 81.65064%,
+    77.82089% 84.50639%,
+    75.35575% 86.97152%,
+    72.5% 88.97114%,
+    69.3404% 90.44449%,
+    65.97296% 91.34679%,
+    62.5% 91.65064%,
+    37.5% 91.65064%,
+    34.02704% 91.34679%,
+    30.6596% 90.44449%,
+    27.5% 88.97114%,
+    24.64425% 86.97152%,
+    22.17911% 84.50639%,
+    20.17949% 81.65064%,
+    7.67949% 60%,
+    6.20615% 56.8404%,
+    5.30384% 53.47296%,
+    5% 50%,
+    5.30384% 46.52704%,
+    6.20615% 43.1596%,
+    7.67949% 40%,
+    20.17949% 18.34936%,
+    22.17911% 15.49361%,
+    24.64425% 13.02848%,
+    27.5% 11.02886%,
+    30.6596% 9.55551%,
+    34.02704% 8.65321%,
+    37.5% 8.34936%,
+    62.5% 8.34936%,
+    65.97296% 8.65321%,
+    69.3404% 9.55551%,
+    72.5% 11.02886%,
+    75.35575% 13.02848%,
+    77.82089% 15.49361%,
+    79.82051% 18.34936%
+  );
 }
 
 .edit .cool-btn {
-  color: #fff;
+  color: #985629;
   font-size: 31px;
+}
+
+.cool-btn:hover {
+  /* display: block; */
+  visibility: visible;
+  z-index: 60;
 }
 
 .show {
@@ -115,10 +210,37 @@ input {
   display: none !important;
 }
 
+.pads {
+  padding: 6px !important;
+}
+
+.ext-pad {
+  border-radius: 100% !important;
+}
+
+.pull-close-right {
+  margin-left: 30px;
+}
+
+.pull-close-left {
+  margin-right: -100px !important;
+}
+
+.leftbox1 {
+  float: left;
+  width: 30%;
+}
+
+.rightbox1 {
+  float: right;
+  width: 50%;
+}
+
+.adjust-top2 {
+  padding-top: -25px !important;
+}
+
 @media screen and (max-width: 990px) {
-  .pads {
-    margin-top: 10px;
-  }
 
   .hide-mobile {
     display: none;
@@ -127,12 +249,16 @@ input {
   .hide-onmain {
     display: block !important;
   }
+
+  .edit {
+    right: 200px;
+  }
 }
 
 .customise-button {
   border: none;
   border-radius: 10px;
-  background-color: #F0E7E1;
+  background-color: #f0e7e1;
   color: #985629;
   padding: 5px;
   min-width: 120px;
@@ -145,10 +271,6 @@ input {
 
 .extra-button2 {
   margin-left: 170px;
-}
-
-.over-avatar {
-  /* background-image: url('../assets/images/ape.png') */
 }
 
 .cursor-on {
@@ -344,10 +466,17 @@ input {
 
 .hex-main img {
   position: absolute;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+  -webkit-clip-path: polygon(
+    0% 50%,
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%
+  );
   -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
 }
 
@@ -356,17 +485,18 @@ input {
 }
 
 .leftbox {
-  float:left;
-  width:50%;
+  float: left;
+  width: 50%;
 }
 
-.rightbox{
-  float:right;
-  width:50%;
+.rightbox {
+  float: right;
+  width: 50%;
 }
 
 .bolden {
-  font-weight: bolder;
+  color: #000 !important;
+  font-weight: bolder !important;
 }
 
 .add-pad-10 {

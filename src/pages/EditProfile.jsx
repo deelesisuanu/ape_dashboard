@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Avatar, Cover, ImgFlex } from '../components/styles/profile'
+import { ImgFlex } from '../components/styles/profile'
 import Modal from '../components/Modal'
 import { AiFillEdit } from 'react-icons/ai'
 import { ToggleContext } from '../contexts/ToggleContext'
@@ -67,27 +67,15 @@ const EditProfile = () => {
                     <div className="col-lg-12 col-12 pt-3 px-4 order-lg-1 order-2">
                         <div className="card p-3 base-card curve-card off-border-q">
                             <form onSubmit={handleSubmit}>
-                                {/* <Cover
-                                    style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        backgroundImage: `url(assets/images/ape.png)`,
-                                        backgroundSize: "cover",
-                                    }}
-                                    className="cursor-on"
-                                    onClick={handleOpenModal}
-                                >
-                                </Cover> */}
-                                <ImgFlex className="cursor-on over-avatar" onClick={handleOpenModal}>
-                                    <Avatar backgroundImage="assets/images/ape.png" bg="white" className='custom-profile-image' />
-                                    <div className="edit">
-                                        <AiFillEdit className='cool-btn' />
+                                <ImgFlex className="over-avatar">
+                                    <div className='full-width'>
+                                        <div className="avater-1 mt-4 align-div-center">
+                                            <img src="assets/images/ape.png" className='profile prof-cus cursor-on' alt="" onClick={handleOpenModal} />
+                                        </div>
+                                        <span className="edit">
+                                            <AiFillEdit className='cool-btn' />
+                                        </span>
                                     </div>
-                                    {/* <div className="avater-1 mt-4">
-                                        <img src="assets/images/hex.png" className='hex' alt="" />
-                                        <img src="assets/images/ape.png" className='profile' alt="" />
-                                    </div> */}
                                 </ImgFlex>
 
                                 <div className="d-flex align-items-center adjust-form">

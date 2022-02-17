@@ -3,6 +3,7 @@ import Svg from "./svg";
 
 const Icon = (props) => (
   <Svg
+    className={props.className}
     viewBox={props.viewBox || "0 0 24 24"}
     width={props.width}
     height={props.height}
