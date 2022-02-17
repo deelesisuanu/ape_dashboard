@@ -12,7 +12,8 @@ import EditProfile from './pages/EditProfile'
 import Notifications from './pages/Notifications'
 import Search from './pages/Search'
 import PostDetails from './pages/PostDetails'
-import UserProfile from './pages/UserProfile';
+import UserProfile from './pages/UserProfile'
+import NotFound from './pages/NotFound'
 
 import { ToggleContext } from './contexts/ToggleContext';
 import { useState } from 'react';
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/search" component={Search} />
                 <Route path="/feed-details" component={PostDetails} />
                 <Route path="/@:username" component={UserProfile} />
+                <Route path="/:others" component={NotFound} />
               </Switch>
               <RightPane />
             </div>
