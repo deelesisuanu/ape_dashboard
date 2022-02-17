@@ -4,7 +4,7 @@ import { CgHashtag } from 'react-icons/cg'
 
 const RightPane = () => {
     return (
-        <div className="col-lg-3 col-12 py-3 ps-lg-0 ps-4 pe-4 order-lg-2 order-1">
+        <div className="col-lg-3 col-12 py-3 ps-lg-0 ps-4 pe-4 order-lg-2 order-1 hide-mobile">
             
             <div className="card d-flex  mt-4 flex-column p-3">
                 <span className='fs-5 fw-600 '>Trending</span>

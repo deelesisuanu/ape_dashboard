@@ -74,24 +74,262 @@ input {
   padding-top: 7px;
   padding-right: 7px;
   position: absolute;
-  right: 0;
+  left: 90px !important;
+  right: 5;
   top: 0;
+
+  /* border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 8px !important; */
+
+  /* bottom: 45px !important; */
   /* display: none; */
 }
 
 .edit .cool-btn {
-  color: #000;
+  color: #fff;
   font-size: 31px;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 .hide {
+  display: none;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.extra-button {
+  margin-left: 10px;
+}
+
+.main-profile {
+  margin: 12px;
+}
+
+.hide-onmain {
+  display: none !important;
+}
+
+@media screen and (max-width: 990px) {
+  .pads {
+    margin-top: 10px;
+  }
+
+  .hide-mobile {
     display: none;
+  }
+
+  .hide-onmain {
+    display: block !important;
+  }
+}
+
+.customise-button {
+  border: none;
+  border-radius: 30px;
+  background-color: #985629;
+  color: #ccc;
+  padding: 15px;
+  min-width: 120px;
+}
+
+.extra-button2 {
+  margin-left: 170px;
 }
 
 .over-avatar {
-    /* background-image: url('../assets/images/ape.png') */
+  /* background-image: url('../assets/images/ape.png') */
+}
+
+.cursor-on {
+  cursor: pointer;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.circle-closed {
+  margin: 12px;
+  font-size: 22px;
+}
+
+.img-container-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.smallsquare {
+  max-width: 20%;
+  height: auto;
+  flex: 0 0 20%;
+  padding-top: 20%;
+  display: grid;
+  position: relative;
+}
+
+.h_rectangle {
+  max-width: 40%;
+  flex: 0 0 40%;
+  padding-top: 20%;
+  position: relative;
+}
+
+.bigsquare {
+  max-width: 40%;
+  height: auto;
+  flex: 0 0 40%;
+  padding-top: 40%;
+  display: grid;
+  position: relative;
+}
+.bigsquare_blank {
+  max-width: 40%;
+  height: auto;
+  flex: 0 0 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.inner_square {
+  max-width: 50%;
+  flex: 0 0 50%;
+  height: 50%;
+  position: relative;
+}
+.v_rectangle {
+  max-width: 20%;
+  flex: 0 0 20%;
+  padding-top: 40%;
+  position: relative;
+}
+
+.img-grid-c {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  padding: 2.5px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.width-300 {
+  width: 300px !important;
+}
+
+.width-0 {
+  width: 0 !important;
+}
+
+.off-border {
+  border-radius: 0 !important;
+}
+
+.chase-avater {
+  margin-top: -20px !important;
+}
+
+.custom-avatar {
+  border-bottom-left-radius: 20% !important;
+  border-bottom-right-radius: 20% !important;
+  border-top-left-radius: 20% !important;
+  border-top-right-radius: 20% !important;
+  transform: rotate(20deg);
+}
+
+.hexagon {
+  top: 0vh;
+  left: 0%;
+  position: absolute;
+  margin: 0 auto;
+  /* background-color: dodgerblue; */
+  border-radius: 30px;
+  width: 100px; 
+  height: 63px;
+  box-sizing: border-box;
+  transition: all 1s;
+  border: 0.4vh solid transparent;
+  /* overflow: hidden; */
+}
+
+/* Creating pseudo-class */
+.hexagon:before, .hexagon:after {
+  content: "";
+  border: inherit;
+  position: absolute;
+  top: -0.5vh;
+  left: -0.5vh;
+  /* background-color: dodgerblue; */
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Align them in such a way
+that they form a hexagon */
+.hexagon:before {
+  transform: rotate(60deg);
+}
+.hexagon:after {
+  transform: rotate(-60deg);
 }

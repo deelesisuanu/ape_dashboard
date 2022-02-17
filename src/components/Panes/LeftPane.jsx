@@ -11,7 +11,7 @@ const LeftPane = () => {
     }, [])
 
     return (
-        <div className={state === 1 ? "col-lg-3 col-12 px-0 border-end sidebar" : "col px-0 border-end sidebar d-none"}>
+        <div className={state === 1 ? "col-lg-3 col-12 px-0 border-end sidebar hide-mobile" : "col px-0 border-end sidebar d-none hide-mobile"}>
             {state === 1 &&
                 <>
                     <div className="d-flex flex-column align-items-center pt-1 ">

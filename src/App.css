@@ -185,9 +185,9 @@ input:focus{
   transition: .5s;
 }
 .card:hover{
-  background-color: #F9FAFC;
-  opacity: .8;
-  cursor: pointer;
+  /* background-color: #F9FAFC; */
+  /* opacity: .8; */
+  /* cursor: pointer; */
 }
 .bg-card{
   background-color: #F5F5F8;

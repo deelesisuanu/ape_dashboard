@@ -1,12 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineBell } from 'react-icons/ai'
 import { Dropdown, DropdownButton } from 'react-bootstrap'
-import { AiOutlineSearch } from 'react-icons/ai'
+import { AiOutlineSearch, AiOutlineMenu } from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
+import { ToggleContext } from '../../contexts/ToggleContext'
 
 const TopPane = () => {
 
-    const [state, setState] = useState(1);
+    const { toggle, setToggle } = useContext(ToggleContext)
+
+    const [state, setState] = useState(1)
+
+    const handleNavToggle = () => {
+        setToggle( (toggle) ? false : true )
+    }
 
     return (
         <div className="top">
@@ -49,10 +56,14 @@ const TopPane = () => {
                                         <img src="assets/images/hex.png" className='hex' alt="" />
                                         <img src="assets/images/ape.png" className='profile' alt="" />
                                     </div>
-                                    <span className='fw-500 text-faded-2 '>Stix.near</span>
+                                    <span className='fw-500 text-faded-2 hide-mobile'>Stix.near</span>
                                 </>}>
                                     <Dropdown.Item href="#/action-1">Disconnect</Dropdown.Item>
                                 </DropdownButton>
+
+                                <span>
+                                    <AiOutlineMenu className='fs-4 text-faded cursor-on hide-onmain' onClick={handleNavToggle} />
+                                </span>
                             </div>
                         </div>
                     </div>
