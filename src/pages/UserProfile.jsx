@@ -49,11 +49,7 @@ const UserProfile = () => {
                                 <div className="col-12 px-0 pe-1">
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec ante sapien. 
-                                        Curabitur ligula orci, aliquet in arcu sit amet, pretium congue tellus. 
-                                        Pellentesque ultricies fermentum mauris, et bibendum justo egestas eu. 
-                                        Curabitur vitae arcu turpis. Maecenas eu dapibus diam. Ut at finibus erat. 
-                                        Nunc quis purus non nibh tristique pulvinar. Interdum et malesuada fames ac 
-                                        ante ipsum primis in faucibus. Etiam scelerisque pulvinar nulla et tristique.
+                                        Curabitur ligula orci, aliquet in arcu sit amet, pretium congue tellus.
                                     </p>
                                 </div>
                             </div>

@@ -58,38 +58,40 @@ input {
 }
 
 .setSelectedActive {
-    background-color: #985629;
+  background-color: #985629;
 }
 
-.overlay {
+.over-avatar {
+  position: relative;
+  display: inline-block;
+}
+
+.over-avatar:hover .edit {
+  display: block;
+}
+
+.edit {
+  padding-top: 7px;
+  padding-right: 7px;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0.3;
-  transition: 0.3s ease;
-  background-color: red;
-  top: 0;
-  bottom: 0;
-  left: 0;
   right: 0;
+  top: 0;
+  /* display: none; */
 }
 
-.avater-1:hover .overlay {
-  opacity: 0.7;
+.edit .cool-btn {
+  color: #000;
+  font-size: 31px;
 }
 
-.icon {
-  position: absolute;
-  color: black;
-  font-size: 2rem;
-  cursor: pointer;
-  left: 50%;
-  bottom: 50%;
-  background-color: red;
+.show {
+    display: block;
 }
 
-/* When you move the mouse over the icon, change color */
-.cool-btn:hover {
-  color: green;
-  /* background-color: #985629; */
+.hide {
+    display: none;
+}
+
+.over-avatar {
+    /* background-image: url('../assets/images/ape.png') */
 }

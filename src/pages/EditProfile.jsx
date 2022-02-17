@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { FaEdit } from 'react-icons/fa'
+import Modal from '../components/Modal';
 
 const EditProfile = () => {
 
-    const [state, setState] = useState(1);
+    const [state, setState] = useState(1)
+    const [modalOpen, setModalOpen] = useState(false)
 
     useEffect(() => {
         setState(1);
     }, [])
+
+    const handleOpenModal = () => {
+        setModalOpen(true)
+    }
+
+    const closeModal = () => {
+        setModalOpen(false)
+    }
 
     return (
         <>
@@ -15,12 +25,23 @@ const EditProfile = () => {
                 <div className="row pt-3 mx-0">
                     <div className="col-lg-12 col-12 pt-3 px-4 order-lg-1 order-2">
                         <div className="card p-3 base-card curve-card">
-                        
+
                             <div className='row'>
                                 <div className='col-lg-4'>
                                 </div>
                                 <div className='col-lg-4'>
+
                                     <div className="d-flex align-items-center">
+                                        <div className="avater-1 over-avatar" onClick={handleOpenModal}>
+                                            <img src="assets/images/hex.png" className='hex' alt="" />
+                                            {/* <img src="assets/images/ape.png" className='profile' alt='' /> */}
+                                            <div className="edit">
+                                                <FaEdit className='cool-btn' />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* <div className="d-flex align-items-center">
                                         <div className="avater-1 mt-4">
                                             <img src="assets/images/hex.png" className='hex' alt="" />
                                             <img src="assets/images/ape.png" className='profile' alt="" />
@@ -30,11 +51,24 @@ const EditProfile = () => {
                                                 </span>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className='col-lg-4'>
                                 </div>
                             </div>
+
+                            <Modal
+                                title="Welcome"
+                                children="Closes ment"
+                                onClose={closeModal}
+                                currentState={ (modalOpen) ? "show" : "hide" }
+                            />
+
+                            {/* <Modal
+                                title="Welcome"
+                                children="Closes ment"
+                                onClose={() => console.log("Hello")}
+                            /> */}
 
                             <div className="row mt-3 px-4 mx-0">
                                 <form action="/" method="post">

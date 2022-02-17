@@ -19,7 +19,7 @@ function App() {
     <Router>
       <div className="app">
         <TopPane />
-        <div className="container-fluid custom-container">
+        <div className="container custom-container">
           <div className="row mx-0 parent" >
             <LeftPane />
             <Switch>
