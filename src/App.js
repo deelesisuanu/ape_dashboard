@@ -38,7 +38,7 @@ function App() {
                 <Route path="/notifications" component={Notifications} />
                 <Route path="/search" component={Search} />
                 <Route path="/feed-details" component={PostDetails} />
-                <Route path="/:username" component={UserProfile} />
+                <Route path="/@:username" component={UserProfile} />
               </Switch>
               <RightPane />
             </div>

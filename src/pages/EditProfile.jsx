@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react'
-import Field from 'redux-form/lib/Field'
-import { Button, StyledInput } from '../components/styles/common'
+import React, { useState, useEffect, useContext } from 'react'
 import { Avatar, Cover, ImgFlex } from '../components/styles/profile'
-import UploadButton from '../components/styles/uploadButton'
-import { Error } from "../components/styles/signin"
-import Modal from '../components/Modal';
-import { FaEdit } from 'react-icons/fa'
+import Modal from '../components/Modal'
 import { AiFillEdit } from 'react-icons/ai'
+import { ToggleContext } from '../contexts/ToggleContext'
 
 const EditProfile = () => {
 
-    const [state, setState] = useState(1)
+    const { toggle, setToggle } = useContext(ToggleContext)
+
+    const [state, setState] = useState(1);
+
+    const handleNavToggle = () => {
+        setToggle((toggle) ? false : true)
+    }
 
     const [modalOpen, setModalOpen] = useState(false)
 
@@ -61,11 +63,11 @@ const EditProfile = () => {
     return (
         <>
             <div className={state === 1 ? "col-lg-6 col-12 px-0 " : "col-12 px-0"} >
-                <div className="row pt-3 mx-0">
+                <div className="row pt-3 mx-0" onClick={handleNavToggle}>
                     <div className="col-lg-12 col-12 pt-3 px-4 order-lg-1 order-2">
-                        <div className="card p-3 base-card curve-card">
+                        <div className="card p-3 base-card curve-card off-border-q">
                             <form onSubmit={handleSubmit}>
-                                <Cover
+                                {/* <Cover
                                     style={{
                                         display: "flex",
                                         justifyContent: "center",
@@ -76,16 +78,16 @@ const EditProfile = () => {
                                     className="cursor-on"
                                     onClick={handleOpenModal}
                                 >
-                                </Cover>
+                                </Cover> */}
                                 <ImgFlex className="cursor-on over-avatar" onClick={handleOpenModal}>
-                                    {/* <div className="avater-1 mt-4 chase-avater">
-                                        <img src="assets/images/hex.png" className='hex' alt="" />
-                                        <img src="assets/images/ape.png" className='profile' alt="" />
-                                    </div> */}
-                                    <Avatar backgroundImage="assets/images/ape.png" bg="white" className='off-border hexagon' />
+                                    <Avatar backgroundImage="assets/images/ape.png" bg="white" className='custom-profile-image' />
                                     <div className="edit">
                                         <AiFillEdit className='cool-btn' />
                                     </div>
+                                    {/* <div className="avater-1 mt-4">
+                                        <img src="assets/images/hex.png" className='hex' alt="" />
+                                        <img src="assets/images/ape.png" className='profile' alt="" />
+                                    </div> */}
                                 </ImgFlex>
 
                                 <div className="d-flex align-items-center adjust-form">

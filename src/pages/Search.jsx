@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import SinglePost from '../components/SinglePost'
 import { AiOutlineSearch } from 'react-icons/ai'
+import { ToggleContext } from '../contexts/ToggleContext'
 
 const Search = props => {
 
@@ -20,6 +21,12 @@ const Search = props => {
         event.preventDefault();
     };
 
+    const { toggle, setToggle } = useContext(ToggleContext)
+
+    const handleNavToggle = () => {
+        setToggle((toggle) ? false : true)
+    }
+
     return (
         <>
             <div className={state === 1 ? "col-lg-6 col-12 px-0 " : "col-12 px-0"} >
@@ -29,7 +36,7 @@ const Search = props => {
                             <h2>You are searching for {search}</h2>
                         </div> : ""
                 }
-                <div className="row pt-3 mx-0">
+                <div className="row pt-3 mx-0" onClick={handleNavToggle}>
                     <div className="col-lg-12 col-12 pt-3 px-4 order-lg-1 order-2">
 
                         <div className="ws-search base-card">

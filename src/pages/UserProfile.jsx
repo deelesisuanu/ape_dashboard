@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import ProfileHeader from '../components/ProfileHeader'
 import { ProfileCorner } from '../components/styles/common'
 import Icon from '../components/styles/icon'
@@ -7,14 +7,21 @@ import { AiOutlineEllipsis } from 'react-icons/ai'
 import { FaEnvelope } from 'react-icons/fa'
 import SinglePost from '../components/SinglePost'
 import Tabs from '../components/styles/tab'
+import { ToggleContext } from '../contexts/ToggleContext'
 
 const UserProfile = () => {
 
-    const [state, setState] = useState(1);
+    const [state, setState] = useState(1)
 
     useEffect(() => {
         setState(1);
     }, [])
+
+    const { toggle, setToggle } = useContext(ToggleContext)
+
+    const handleNavToggle = () => {
+        setToggle((toggle) ? false : true)
+    }
 
     const dob = new Date();
     const joinedAt = new Date();
@@ -54,7 +61,7 @@ const UserProfile = () => {
 
     return (
         <>
-            <div className={state === 1 ? "col-lg-6 col-12 px-0" : "col-12 px-0"} >
+            <div className={state === 1 ? "col-lg-6 col-12 px-0" : "col-12 px-0"} onClick={handleNavToggle}>
                 <ProfileCorner border="white" className='main-profile'>
                     {/* <ProfileHeader
                         heading={`John Smith`}
@@ -82,11 +89,15 @@ const UserProfile = () => {
                     </div>
                     <Info color="black">
                         <h2>
-                            Raymond
+                            Danny Boy
                         </h2>
-                        <p>@danielle1</p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec ante sapien.
-                        <Dates>
+                        <p className='add-pad-10'>@danielle1</p>
+
+                        <span className='add-mag-10'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec ante sapien.
+                        </span>
+
+                        <Dates className='add-pad-10'>
                             <div>
                                 <Icon
                                     d={locationPath}
@@ -125,6 +136,15 @@ const UserProfile = () => {
                                 </span>
                             </div>
                         </Dates>
+
+                        <div className='row add-pad-10'>
+                            <div className="leftbox">
+                                <span className='bolden'>100</span> Following
+                            </div>
+                            <div className="rightbox">
+                                <span className='bolden'>200</span> Followers
+                            </div>
+                        </div>
                     </Info>
 
                     <Tabs tabList={tabList} />
