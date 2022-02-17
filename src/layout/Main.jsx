@@ -7,10 +7,10 @@ export default function Home() {
 
   const [state, setState] = useState(1);
 
-  const { toggle, setToggle } = useContext(ToggleContext)
+  const { setToggle } = useContext(ToggleContext)
   
   const handleNavToggle = () => {
-    setToggle((toggle) ? false : true)
+    setToggle(false)
   }
 
   useEffect(() => {

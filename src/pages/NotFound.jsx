@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react'
-import Notification from '../components/Notification'
 import { ToggleContext } from '../contexts/ToggleContext'
 
 const NotFound = () => {
@@ -10,10 +9,10 @@ const NotFound = () => {
         setState(1);
     }, [])
 
-    const { toggle, setToggle } = useContext(ToggleContext)
+    const { setToggle } = useContext(ToggleContext)
 
     const handleNavToggle = () => {
-        setToggle((toggle) ? false : true)
+        setToggle(false)
     }
 
     return (

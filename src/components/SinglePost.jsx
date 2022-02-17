@@ -25,7 +25,7 @@ const SinglePost = () => {
                     <span className='text-faded-2 fw-500 fs-8 '>24h</span>
                 </div>
             </div>
-            <p className='pt-2 fs-7 fw-500 '>Finally pulled the trigger on an SMB Excited to contribute to <a href="">@MonkeyDAO</a> <a href="">@MonkeyMBS</a> </p>
+            <p className='pt-2 fs-7 fw-500 '>Finally pulled the trigger on an SMB Excited to contribute to <a href="/@monkeydao">@MonkeyDAO</a> <a href="/@monkeymbs">@MonkeyMBS</a> </p>
             <div className="d-flex align-items-center ">
                 <AiFillHeart className='text-primary fs-5' />
                 <span className=' ps-2 fs-8 fw-500 '>244 Likes </span>

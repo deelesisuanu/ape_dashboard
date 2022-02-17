@@ -21,10 +21,10 @@ const Search = props => {
         event.preventDefault();
     };
 
-    const { toggle, setToggle } = useContext(ToggleContext)
+    const { setToggle } = useContext(ToggleContext)
 
     const handleNavToggle = () => {
-        setToggle((toggle) ? false : true)
+        setToggle(false)
     }
 
     return (

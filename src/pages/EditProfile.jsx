@@ -6,12 +6,12 @@ import { ToggleContext } from '../contexts/ToggleContext'
 
 const EditProfile = () => {
 
-    const { toggle, setToggle } = useContext(ToggleContext)
+    const { setToggle } = useContext(ToggleContext)
 
     const [state, setState] = useState(1);
 
     const handleNavToggle = () => {
-        setToggle((toggle) ? false : true)
+        setToggle(false)
     }
 
     const [modalOpen, setModalOpen] = useState(false)

@@ -10,10 +10,10 @@ const Notifications = () => {
         setState(1);
     }, [])
 
-    const { toggle, setToggle } = useContext(ToggleContext)
+    const { setToggle } = useContext(ToggleContext)
 
     const handleNavToggle = () => {
-        setToggle((toggle) ? false : true)
+        setToggle(false)
     }
 
     return (

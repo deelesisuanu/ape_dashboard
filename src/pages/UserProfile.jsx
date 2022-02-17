@@ -2,24 +2,27 @@ import React, { useState, useEffect, useContext } from 'react'
 import { ProfileCorner } from '../components/styles/common'
 import Icon from '../components/styles/icon'
 import { Cover, ImgFlex, Avatar, Info, Dates, Button } from '../components/styles/profile'
-import { AiTwotoneNotification, AiFillNotification } from 'react-icons/ai'
 import { IoMdNotifications } from 'react-icons/io'
 import SinglePost from '../components/SinglePost'
 import Tabs from '../components/styles/tab'
 import { ToggleContext } from '../contexts/ToggleContext'
+import { useHistory } from 'react-router-dom'
 
 const UserProfile = () => {
 
     const [state, setState] = useState(1)
+    
+    const myHistory = useHistory()
+    const historyPath = myHistory.location.pathname.replace(/\\|\//g,'')
 
     useEffect(() => {
         setState(1);
     }, [])
 
-    const { toggle, setToggle } = useContext(ToggleContext)
+    const { setToggle } = useContext(ToggleContext)
 
     const handleNavToggle = () => {
-        setToggle((toggle) ? false : true)
+        setToggle(false)
     }
 
     const dob = new Date();
@@ -89,7 +92,7 @@ const UserProfile = () => {
                         <h2>
                             Danny Boy
                         </h2>
-                        <p className='add-pad-10'>@danielle1</p>
+                        <p className='add-pad-10'>{historyPath}</p>
 
                         <span className='add-mag-10'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec ante sapien.
