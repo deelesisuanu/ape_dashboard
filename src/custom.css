@@ -510,3 +510,9 @@ input {
 .add-pad {
   padding: 10px;
 }
+
+.single-post-card:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}

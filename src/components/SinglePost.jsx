@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
-import { AiFillHeart } from 'react-icons/ai'
+import { AiFillHeart, AiOutlineShareAlt } from 'react-icons/ai'
 import { MdInsertComment } from 'react-icons/md'
 import { useHistory } from 'react-router-dom'
 
@@ -14,7 +14,7 @@ const SinglePost = () => {
     }
 
     return (
-        <div className="card p-3 base-card curve-card" onClick={handlePostNavigation}>
+        <div className="card p-3 base-card curve-card single-post-card" onClick={handlePostNavigation}>
             <div className="d-flex align-items-center">
                 <div className="avater-1 avater-2 mt-2">
                     <img src="assets/images/hex.png" className='hex' alt="" />
@@ -29,6 +29,8 @@ const SinglePost = () => {
             <div className="d-flex align-items-center ">
                 <AiFillHeart className='text-primary fs-5' />
                 <span className=' ps-2 fs-8 fw-500 '>244 Likes </span>
+                <AiOutlineShareAlt className='text-faded ms-4 fs-5' />
+                <span className=' ps-2 fs-8 fw-500 '>15+ Shares </span>
                 <MdInsertComment className='text-faded ms-4 fs-5' />
                 <span className=' ps-2 fs-8 fw-500'>2 Comments</span>
             </div>
