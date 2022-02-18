@@ -26,6 +26,14 @@ const SinglePost = () => {
                 </div>
             </div>
             <p className='pt-2 fs-7 fw-500 '>Finally pulled the trigger on an SMB Excited to contribute to <a href="/@monkeydao">@MonkeyDAO</a> <a href="/@monkeymbs">@MonkeyMBS</a> </p>
+            <div className="d-flex align-items-center">
+                <img
+                    src="assets/images/pac.jpg"
+                    alt=''
+                    style={{ width: "100%" }}
+                    className="fr-img-clip"
+                />
+            </div>
             <div className="d-flex align-items-center ">
                 <AiFillHeart className='text-primary fs-5' />
                 <span className=' ps-2 fs-8 fw-500 '>244 Likes </span>

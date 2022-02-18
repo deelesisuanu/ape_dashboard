@@ -241,7 +241,6 @@ input {
 }
 
 @media screen and (max-width: 990px) {
-
   .hide-mobile {
     display: none;
   }
@@ -512,7 +511,14 @@ input {
 }
 
 .single-post-card:hover {
-  background-color: #333;
-  color: #fff;
+  background-color: #f8f8f8;
+  color: #232323;
   cursor: pointer;
+}
+
+.fr-img-clip {
+  height: 200px !important;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
